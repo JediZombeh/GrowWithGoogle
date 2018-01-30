@@ -1,0 +1,58 @@
+/* global body styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .9em;
+  color: #777777;
+  background: url("../img/stripes.gif") repeat #D8D8D8;
+}
+
+
+
+ /* layout styles */
+ .card {
+   background: #FAFAFA;
+   text-align: left;
+   border: 2px solid #E09A5C;
+   padding: 0 16px;
+   border-radius: 3px;
+   width:300px;
+   margin-right: auto;
+   margin-left: auto;
+   box-shadow: 6px 8px 8px 1px #777777;
+ }
+
+ .info {
+   border: 1px solid #E09A5C;
+   border-radius: 3px;
+   padding: 0 16px;
+   margin: 16px 0 16px;
+ }
+
+
+/* responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: .75rem;
+  line-height: 1.5em;
+}
+
+/* headline */
+.animalName {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #212121;
+  font-style: italic;
+}
+
+.itemLabel {
+  color: #212121;
+  font-weight: bold;
+  text-transform: uppercase;
+}
