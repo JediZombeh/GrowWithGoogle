@@ -1,0 +1,34 @@
+// ================================================
+// DSG Email Dev :: Automation Slavedriver
+// version:  1.0.0
+// author:   Steven Till (@jediZombeh)
+// ================================================
+
+
+// Include plugins
+var gulp = require('gulp');
+var browserSync = require('browser-sync').create();
+
+
+/*Global watch*/
+
+gulp.task('watch', function() {
+  gulp.watch('./scheme_marketing/source_code/index.html', ['triggerReload']);
+});
+
+// Launch web server & watch scss/html files
+gulp.task('serve', function() {
+    browserSync.init({
+        server: "./scheme_marketing/source_code"
+    });
+
+    gulp.watch("./index.html").on('change', browserSync.reload);
+});
+
+// Auto-reload the index files after sass or mjml is updated
+gulp.task('triggerReload', function() {
+  browserSync.reload('./index.html');
+});
+
+// Default Task
+gulp.task('default', ['watch', 'serve']);

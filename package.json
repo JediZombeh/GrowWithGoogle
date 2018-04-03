@@ -1,0 +1,23 @@
+{
+  "name": "grow-with-google",
+  "version": "1.0.0",
+  "description": "task runner for auto-reload of output files in browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JediZombeh/GrowWithGoogle.git"
+  },
+  "author": "Steven Till",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JediZombeh/GrowWithGoogle/issues"
+  },
+  "homepage": "https://github.com/JediZombeh/GrowWithGoogle#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  }
+}
