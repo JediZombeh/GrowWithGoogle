@@ -1,9 +1,9 @@
 
 $(function(){ //<-- Waits to execute any code until the DOM is loaded
 	// Declare the variables
-	const SWATCH = $('#colorPicker').val(),
+	const SWATCH = $('#colorPicker'),
 				SUBMIT = $('#submit'),
-				GRID = $('#canvas');
+				GRID = $('#pixelCanvas');
 
 	SUBMIT.on('click', function makeGrid(event) {
 		event.preventDefault(); // prevent page refresh
@@ -29,5 +29,14 @@ $(function(){ //<-- Waits to execute any code until the DOM is loaded
 	$('td').on('click', function() {
 		event.preventDefault(); // prevent page refresh
 		this.css('background-color', SWATCH);
+	});
+
+	// When a cell is clicked, call colorCell
+	GRID.on('click', 'td', function colorCell(evt) {
+	    var background = (evt.target).style.backgroundColor;
+	    var isWhiteBackground = !background || background === 'white' || background === 'rgb(255, 255, 255)' ||
+	        background === '#fff' || background === '#fffff';
+	    var color = isWhiteBackground ? SWATCH.val() : 'white';
+	    $(evt.target).css('background-color', color);
 	});
 })
